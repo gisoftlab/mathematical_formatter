@@ -15,6 +15,7 @@ class Lexer {
     const T_MINUS = 'T_MINUS';
     const T_MUL = 'T_MUL';
     const T_DIV = 'T_DIV' ;
+    const T_DOT= 'T_DOT' ;
 
     static $_operators = [
         self::T_MUL => 0,
@@ -26,6 +27,7 @@ class Lexer {
     static $_default_config = [
         '/^\s/i' => self::T_WHITESPACE,
         '/^\d+/i' => self::T_NUMBER,
+        '/^\./i' => self::T_DOT,
         '/^\+/i' => self::T_PLUS,
         '/^-/i' => self::T_MINUS,
         '/^\*/i' => self::T_MUL,
@@ -194,7 +196,7 @@ class Lexer {
                 $result = $this->_match($line, $number, $offset, $position);
 
                 if($result === false) {
-                    throw new Exception("Unable to parse line " . $line. ".");
+                    throw new Exception("Unable to parse line " . $line. "");
                 }
 
                 $this->tokens[] = $result;

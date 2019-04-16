@@ -2,8 +2,8 @@
 
 namespace Drupal\mathematical_formatter\Functional;
 
-use Drupal\mathematical_formatter\Lexer\Lexer;
-use Drupal\mathematical_formatter\Lexer\Token;
+use Drupal\mathematical_formatter\Utility\Lexer\Lexer;
+use Drupal\mathematical_formatter\Utility\Lexer\Token;
 
 use Drupal\Tests\UnitTestCase;
 

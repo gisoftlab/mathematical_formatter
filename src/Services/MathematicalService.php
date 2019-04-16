@@ -9,8 +9,7 @@ use Drupal\mathematical_formatter\Utility\Lexer\Parser;
  * $our_service = \Drupal::service('mathematical_service.compute');
  * $our_service-> parse(array('2 + 3 * 2 - 6 / 2'));
  */
-class MathematicalService {
-
+class MathematicalService  implements MathematicalInterface {
 
     /**
      * MathematicalService constructor.
